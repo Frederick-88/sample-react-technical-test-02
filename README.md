@@ -11,7 +11,7 @@ Tools Used :
 
 Skills Demonstrated :
 
-1. Integrating script in React
+1. Integrating `<script>` in React
 2. Security by securing API key to ENV
 3. React Redux & Thunk - State Management Integrations
 4. React Skills with React Hooks (UseState, UseEffect, etc)
