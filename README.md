@@ -21,11 +21,11 @@ Skills Demonstrated :
 
 To run in local, do:
 
-### get `.env` from `.env.sample`, and fill the valid API key
+#### 1. get `.env` from `.env.sample`, and fill the valid API key
 
-### `npm i`
+#### 2. do `npm i`
 
-### `npm run start`
+#### 3. do `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
