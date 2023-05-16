@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import loadScript from "load-script";
 import { connect } from "react-redux";
 import {
@@ -14,17 +14,19 @@ const MapAutoComplete = (props) => {
   // State
   // -----
   const [isLoading, setIsLoading] = useState(false);
+  const mapRef = useRef();
 
   // -------
   // Methods
   // -------
   const initializeMap = (googleMapsApi) => {
     // using "useRef" can, using "getElementById" also can
-    const map = new googleMapsApi.Map(document.getElementById("map"), {
+    const map = new googleMapsApi.Map(mapRef.current, {
       center: { lat: 40.749933, lng: -73.98633 },
       zoom: 13,
       mapTypeControl: false,
     });
+
     const card = document.getElementById("pac-card");
     const input = document.getElementById("pac-input");
     const biasInputElement = document.getElementById("use-location-bias");
@@ -150,7 +152,7 @@ const MapAutoComplete = (props) => {
 
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAP_API_KEY}&callback=initializeMap&libraries=places`,
-      { async: true, defer: true },
+      { defer: true },
       () => {
         setIsLoading(false);
       }
@@ -206,7 +208,7 @@ const MapAutoComplete = (props) => {
           />
         </div>
       </div>
-      <div id="map"></div>
+      <div id="map" ref={mapRef}></div>
       <div id="infowindow-content">
         <span id="place-name" className="title"></span>
         <br />
