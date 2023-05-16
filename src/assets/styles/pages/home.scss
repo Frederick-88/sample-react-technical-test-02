@@ -1,13 +1,13 @@
 .home {
   padding: 50px 0;
 
-  .title,
+  .home-title,
   .search-history,
   .map-auto-complete {
     padding: 0 50px;
   }
 
-  .title {
+  .home-title {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 2rem;
@@ -49,6 +49,12 @@
   }
 
   .map-auto-complete {
+    display: block;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+
     .loading-text {
       margin-bottom: 10px;
     }
