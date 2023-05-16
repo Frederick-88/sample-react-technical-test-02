@@ -21,6 +21,8 @@ Skills Demonstrated :
 
 To run in local, do:
 
+### get `.env` from `.env.sample`, and fill the valid API key
+
 ### `npm i`
 
 ### `npm run start`
