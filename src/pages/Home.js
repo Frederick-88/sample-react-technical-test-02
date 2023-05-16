@@ -67,7 +67,7 @@ const Home = (props) => {
 
   return (
     <div className="home">
-      <h1 className="title">AppFuxion Technical Test Page</h1>
+      <h1 className="home-title">AppFuxion Technical Test Page</h1>
 
       <hr className="divider-line" />
 
